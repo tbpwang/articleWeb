@@ -1,9 +1,12 @@
 package demo.controller;
 
+import demo.model.Article;
 import demo.model.User;
+import demo.service.ArticleService;
 import demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -17,6 +20,9 @@ public class UserController extends BaseController {
     @Autowired
     public UserService userService;
 
+    @Autowired
+    public ArticleService articleService;
+
     @RequestMapping("register")
     public String register(User user) {
         userService.create(user);
@@ -26,15 +32,14 @@ public class UserController extends BaseController {
     @RequestMapping("login")
     public String login(User user) {
         user = userService.login(user);
-        System.out.println(user);
         if (user != null) {
             session.setAttribute("user", user);
             String role = user.getRole();
             if (role.equals("admin")) {
-                return "redirect:/admin.jsp";
+                return "redirect:/article/list";
             }
             if (role.equals("user")) {
-                return "redirect:/user.jsp";
+                return "redirect:/article/queryAll";
             }
 
         }
@@ -46,5 +51,11 @@ public class UserController extends BaseController {
     public String logout() {
         session.invalidate();
         return "redirect:/index.jsp";
+    }
+
+    @RequestMapping("findById/{id}")
+    public String findById(@PathVariable("id") Integer id) {
+        session.setAttribute("article", articleService.search(id));
+        return "redirect:/article/detail.jsp";
     }
 }

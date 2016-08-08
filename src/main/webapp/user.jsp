@@ -9,9 +9,32 @@
 <c:if test="${sessionScope.user.role eq user}">
     <c:redirect url="/index.jsp"/>
 </c:if>
-<h1>user page</h1>
-User: ${sessionScope.user.username}
+<h1>用户界面</h1>
+<p style="text-align: right">Welcome! User:  ${sessionScope.user.username}</p>
 <hr>
-<a href="${ctx}/user/logout">LOG OUT</a>
+<form action="${ctx}/article/searchByKey"method="post">
+    标题关键字： <input type="text" name="title">
+    内容关键字： <input type="text" name="content">
+    <input type="submit" value="查找文章">
+</form>
+<hr>
+<h1>文章列表</h1>
+<hr>
+<table border="1">
+    <tr>
+        <th>序号</th>
+        <th>文章标题</th>
+        <th>发布日期</th>
+    </tr>
+    <c:forEach var="article" items="${sessionScope.list}" varStatus="vs">
+        <tr>
+            <td>${vs.count}</td>
+            <td><a href="${ctx}/article/queryForDetail/${article.id}">${article.title}</a></td>
+            <td>${article.date}</td>
+        </tr>
+    </c:forEach>
+</table>
+<hr>
+<a href="${ctx}/user/logout">注销</a>
 </body>
 </html>

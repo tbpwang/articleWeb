@@ -2,6 +2,8 @@ package demo.service;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created at 221
@@ -20,4 +22,6 @@ public interface GenericService<T extends Serializable, ID extends Number> {
     void modify(T t);
 
     void remove(ID id);
+
+    List<T> queryByMap(String statement, Map<String, Object> map);
 }

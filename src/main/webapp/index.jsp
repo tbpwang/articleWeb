@@ -6,14 +6,14 @@
     <title>index page</title>
 </head>
 <body>
-<h1>index page</h1>
+<h1>首页</h1>
 <form action="${ctx}/user/login" method="post">
-    <input type="text" name="username" placeholder="USERNAME" value="admin"><br>
-    <input type="password" name="password" placeholder="PASSWORD" value="123"><br>
-    <input type="submit" value="LOGIN">
+    用户名：<input type="text" name="username" placeholder="USERNAME" value="admin"><br>
+    密 码：<input type="password" name="password" placeholder="PASSWORD" value="123"><br>
+    <input type="submit" value="登陆">
 </form>
 ${requestScope.message}
 <hr>
-<a href="${ctx}/register.jsp">REGISTER</a>
+<a href="${ctx}/register.jsp">注册</a>
 </body>
 </html>
