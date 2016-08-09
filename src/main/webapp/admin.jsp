@@ -6,6 +6,12 @@
     <title>admin page</title>
     <script>
         function del() { return confirm('REMOVE?'); }
+        function checkRequiredInput() {
+           var title = document.getElementsByName("title");
+           var abstractString = document.getElementsByName("abstractString");
+           var content = document.getElementsByName("content");
+           var date = document.getElementsByName("date");
+        }
     </script>
 </head>
 <body>
@@ -38,20 +44,21 @@
 <h1>Article Create</h1>
 <form action="${ctx}/article/create" method="post">
     <input type="hidden" name="userId" value="${user.id}"><br>
-    文章题目: <label>
-    <input name="title">
+    文章题目*: <label>
+    <input name="title" required="required">
 </label><br>
-    文章摘要: <label>
-    <input name="abstractString">
+    文章摘要*: <label>
+    <input name="abstractString" required="required">
 </label><br>
-    文章内容: <label>
-    <input type="text" name="content">
+    文章内容*: <label>
+    <input type="text" name="content" required="required">
 </label><br>
-    发布日期: <label>
-    <input type="date" name="date">
+    发布日期*: <label>
+    <input type="date" name="date" required="required">
 </label><br>
-    <input type="submit" value="添加文章">
+    <input type="submit"  onclick="checkRequiredInput()" value="添加文章">
 </form>
+<label >注：标示*的为必填项</label>
 <hr>
 <a href="${ctx}/user/logout">注销</a>
 </body>
