@@ -7,9 +7,9 @@
     <title>article detail page</title>
 </head>
 <body>
-<span style="text-align: center"><h1>文章详情</h1></span>
+<h2>文章详情</h2>
 <hr>
-<h2>${sessionScope.article.title}</h2>
+<h3 style="text-align: center">${sessionScope.article.title}</h3>
 <p style="text-align: right">
     发布时间: ${sessionScope.article.date}
 </p>

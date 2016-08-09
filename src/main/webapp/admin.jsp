@@ -38,10 +38,18 @@
 <h1>Article Create</h1>
 <form action="${ctx}/article/create" method="post">
     <input type="hidden" name="userId" value="${user.id}"><br>
-    文章题目: <input name="title"><br>
-    文章摘要: <input name="abstractString"><br>
-    文章内容: <input type="text" name="content"><br>
-    发布日期: <input type="date" name="date"><br>
+    文章题目: <label>
+    <input name="title">
+</label><br>
+    文章摘要: <label>
+    <input name="abstractString">
+</label><br>
+    文章内容: <label>
+    <input type="text" name="content">
+</label><br>
+    发布日期: <label>
+    <input type="date" name="date">
+</label><br>
     <input type="submit" value="添加文章">
 </form>
 <hr>

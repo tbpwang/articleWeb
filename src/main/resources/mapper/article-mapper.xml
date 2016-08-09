@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="article">
+    <select id="list" resultType="article">
+        SELECT *
+        FROM examination.article
+        ORDER BY id
+    </select>
+    <select id="search" resultType="article">
+        SELECT *
+        FROM examination.article
+        WHERE id = #{id}
+    </select>
+
+    <select id="search_by_keys" parameterType="hashMap" resultType="article">
+        SELECT
+            *
+        FROM examination.article a
+        WHERE title LIKE concat ('%', #{title}, '%') AND content LIKE concat('%', #{content}, '%')
+    </select>
+
+    <update id="modify">
+        UPDATE examination.article
+        SET
+            title = #{title}, 
+            abstractString = #{abstractString}, 
+            content = #{content}, 
+            date = #{date}, 
+            userId = #{userId}
+        WHERE id = #{id}
+    </update>
+    <delete id="remove">
+        DELETE FROM examination.article
+        WHERE id = #{id}
+    </delete>
+    <insert id="create" parameterType="article" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO examination.article (
+            title, 
+            abstractString, 
+            content, 
+            date, 
+            userId
+        )
+        VALUES (
+            #{title}, 
+            #{abstractString}, 
+            #{content}, 
+            #{date}, 
+            #{userId}
+        )
+    </insert>
+</mapper>

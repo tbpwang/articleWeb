@@ -12,9 +12,13 @@
 <h1>用户界面</h1>
 <p style="text-align: right">Welcome! User:  ${sessionScope.user.username}</p>
 <hr>
-<form action="${ctx}/article/searchByKey"method="post">
-    标题关键字： <input type="text" name="title">
-    内容关键字： <input type="text" name="content">
+<form action="${ctx}/article/searchByKey" method="post">
+    标题关键字： <label>
+    <input type="text" name="title">
+</label>
+    内容关键字： <label>
+    <input type="text" name="content">
+</label>
     <input type="submit" value="查找文章">
 </form>
 <hr>
