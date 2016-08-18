@@ -11,7 +11,7 @@
     用 户 名：<input type="text" name="username" placeholder="USERNAME" required><br>
     密    码：<input type="password" name="password" placeholder="PASSWORD" required><br>
     确认密码：<input type="password" name="repassword" placeholder="REPASSWORD" required><br>
-    联系电话：<input type="text" name="phone" placeholder="TELEPHONE" required><br>
+    联系电话：<input type="tel" name="phone" placeholder="TELEPHONE" required><br>
     联系地址：<input type="text" name="address" placeholder="ADDRESS" required><br>
     <input type="submit" value="注册用户">
 </form>
