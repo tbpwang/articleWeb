@@ -7,7 +7,7 @@
     <script>
         function del() { return confirm('REMOVE?'); }
         function checkRequiredInput() {
-           var title = document.getElementsByName("title");
+           var title = document.getElementsByName("title").value;
            var abstractString = document.getElementsByName("abstractString");
            var content = document.getElementsByName("content");
            var date = document.getElementsByName("date");
@@ -45,7 +45,7 @@
 <form action="${ctx}/article/create" method="post">
     <input type="hidden" name="userId" value="${user.id}"><br>
     文章题目*: <label>
-    <input name="title" required="required">
+    <input id="title" name="title" required="required">
 </label><br>
     文章摘要*: <label>
     <input name="abstractString" required="required">
