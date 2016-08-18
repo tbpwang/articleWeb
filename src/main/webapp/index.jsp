@@ -8,9 +8,10 @@
 </head>
 <body>
 <h2>首页</h2>
+<hr>
 <form action="${ctx}/user/login" method="post">
-    <label>用户名：<input type="text" name="username" placeholder="USERNAME" value="admin"> </label>
-    <label>密  码：<input type="password" name="password" placeholder="PASSWORD" value="123"></label><br>
+    <label>用户名：</label><input type="text" name="username" placeholder="USERNAME" value="admin">
+    <label>密  码：</label><input type="password" name="password" placeholder="PASSWORD" value="123"><br>
     <input type="submit" value="登陆">
 </form>
 ${requestScope.message}

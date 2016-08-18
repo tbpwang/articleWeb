@@ -21,8 +21,8 @@
 <h2>管理员页面</h2>
 <p style="text-align: right">Welcome! Admin: ${sessionScope.user.username}</p>
 <hr>
-<h1>Article List</h1>
-<hr/>
+<h2>Article List</h2>
+<hr>
 <table border="1">
     <tr>
         <th>序号</th>
@@ -41,7 +41,7 @@
     </c:forEach>
 </table>
 <hr>
-<h1>Article Create</h1>
+<h2>Article Create</h2>
 <form action="${ctx}/article/create" method="post">
     <input type="hidden" name="userId" value="${user.id}"><br>
     文章题目*: <label>
