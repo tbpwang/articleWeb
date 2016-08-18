@@ -10,7 +10,7 @@
 <c:if test="${sessionScope.user.role eq user}">
     <c:redirect url="/index.jsp"/>
 </c:if>
-<h1>用户界面</h1>
+<h2>用户界面</h2>
 <p style="text-align: right">Welcome! User:  ${sessionScope.user.username}</p>
 <hr>
 <form action="${ctx}/article/searchByKey" method="post">

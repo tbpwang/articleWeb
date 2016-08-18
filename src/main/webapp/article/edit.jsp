@@ -7,7 +7,7 @@
     <title>article edit page</title>
 </head>
 <body>
-<h1>Article Edit</h1>
+<h2>Article Edit</h2>
 <form action="${ctx}/article/modify" method="post">
     <input type="hidden" name="id" value="${sessionScope.article.id}">
     <input type="hidden" name="userId" value="${sessionScope.article.userId}"><br>

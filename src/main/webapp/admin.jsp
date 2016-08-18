@@ -18,7 +18,7 @@
 <c:if test="${sessionScope.user.role eq admin}">
     <c:redirect url="/index.jsp"/>
 </c:if>
-<h1>管理员页面</h1>
+<h2>管理员页面</h2>
 <p style="text-align: right">Welcome! Admin: ${sessionScope.user.username}</p>
 <hr>
 <h1>Article List</h1>

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
-<h1>普通用户注册</h1>
+<h2>普通用户注册</h2>
 <form action="${ctx}/user/register" method="post">
     用 户 名：<input type="text" name="username" placeholder="USERNAME" required><br>
     密    码：<input type="password" id="password" name="password" placeholder="PASSWORD" required><br>

@@ -5,7 +5,7 @@
         <title>article add page</title>
     </head>
     <body>
-        <h1>Article Create</h1>
+        <h2>Article Create</h2>
         <form action="${ctx}/article/create" method="post">
              <input type="hidden" name="userId" value="${user.id}"><br>
             TITLE: <input name="title"><br>

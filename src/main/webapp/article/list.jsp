@@ -8,7 +8,7 @@
         </script>
     </head>
     <body>
-        <h1>Article List</h1>
+        <h2>Article List</h2>
         <hr/>
         <c:import url="${ctx}/article/create.jsp"/>
         <hr/>
