@@ -23,7 +23,7 @@
 <body>
 <h2>普通用户注册</h2>
 <hr>
-<form action="${ctx}/user/register" method="post" style="white-space: pre-line; white-space-treatment: preserve; all-space-treatment: preserve">
+<form action="${ctx}/user/register" method="post">
     用 户 名：<input type="text" name="username" placeholder="USERNAME" required><br>
     密    码：<input type="password" id="password" name="password" placeholder="PASSWORD" required><br>
     确认密码：<input type="password" id="repassword" name="repassword" placeholder="REPASSWORD" required><br>
