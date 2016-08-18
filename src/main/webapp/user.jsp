@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>user page</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
 <c:if test="${sessionScope.user.role eq user}">

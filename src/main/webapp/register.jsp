@@ -18,6 +18,7 @@
 
         }
     </script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
 <h1>普通用户注册</h1>

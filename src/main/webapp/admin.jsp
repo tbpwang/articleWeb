@@ -4,15 +4,15 @@
 <html>
 <head>
     <title>admin page</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     <script>
         function del() { return confirm('REMOVE?'); }
-        function checkRequiredInput() {
-           var title = document.getElementsByName("title").value;
-           var abstractString = document.getElementsByName("abstractString");
-           var content = document.getElementsByName("content");
-           var date = document.getElementsByName("date");
-        }
     </script>
+    <%--<script>--%>
+        <%--function checkRequiredInput() {--%>
+            <%--var title = document.getElementsByName("title").value;--%>
+        <%--}--%>
+    <%--</script>--%>
 </head>
 <body>
 <c:if test="${sessionScope.user.role eq admin}">
