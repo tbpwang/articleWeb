@@ -24,12 +24,13 @@ CREATE TABLE examination.article (
   title          VARCHAR(255),
   abstractString VARCHAR(1024),
   content        TEXT,
-  date           DATE,
-  userId         INT UNSIGNED
+  date           TIMESTAMP DEFAULT now()
 );
 
-ALTER TABLE examination.article
-    ADD CONSTRAINT fk_article_userid FOREIGN KEY(userId) REFERENCES examination.user(id);
+TRUNCATE TABLE examination.user;
+
+SELECT *
+FROM examination.article;;
 
 
 

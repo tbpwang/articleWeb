@@ -17,7 +17,7 @@
     摘要: ${sessionScope.article.abstractString}
 </p>
 <p>
-    文章内容: ${sessionScope.article.content}
+    正文: ${sessionScope.article.content}
 </p>
 </body>
 </html>

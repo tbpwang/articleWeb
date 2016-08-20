@@ -12,5 +12,5 @@ public class Article extends BaseModel {
     private String abstractString;
     private String content;
     private String date;
-    private int userId;
+//    private int userId;
 }

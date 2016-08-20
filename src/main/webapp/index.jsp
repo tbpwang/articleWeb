@@ -16,6 +16,8 @@
 </form>
 ${requestScope.message}
 <hr>
+<a href="${ctx}/article/queryAll">查看文章标题</a>
+<hr>
 <a href="${ctx}/register.jsp">注册</a>
 </body>
 </html>

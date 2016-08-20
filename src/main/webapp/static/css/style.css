@@ -1,14 +1,14 @@
 
-table {
-    table-layout: auto;
-    empty-cells: hide;
-    border-collapse: collapse;
-}
+/*table {*/
+    /*table-layout: auto;*/
+    /*empty-cells: hide;*/
+    /*border-collapse: collapse;*/
+/*}*/
 
-table.td {
-    vertical-align: middle;
-}
+/*table.td {*/
+    /*vertical-align: middle;*/
+/*}*/
 
-form{
-    white-space: pre-line;
-}
+/*form{*/
+    /*white-space: pre-line;*/
+/*}*/

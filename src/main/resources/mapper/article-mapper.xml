@@ -28,8 +28,7 @@
             title = #{title}, 
             abstractString = #{abstractString}, 
             content = #{content}
---             date = #{date},
---             userId = #{userId}
+
         WHERE id = #{id}
     </update>
     <delete id="remove">
@@ -40,16 +39,14 @@
         INSERT INTO examination.article (
             title, 
             abstractString, 
-            content, 
-            date, 
-            userId
+            content
+
         )
         VALUES (
             #{title}, 
             #{abstractString}, 
-            #{content}, 
-            #{date}, 
-            #{userId}
+            #{content}
+
         )
     </insert>
 </mapper>
